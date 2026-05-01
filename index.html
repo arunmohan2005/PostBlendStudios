@@ -1,0 +1,330 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Blend Studios</title>
+    <link rel="icon" href="logo.jpeg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    html{scroll-behavior:smooth;}
+    body{background:#0b0b0f;color:white;}
+
+    nav{display:flex;align-items:center;padding:20px 60px;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .logo img{width:55px;}
+    .menu{margin-left:auto;margin-right:40px;}
+    nav a{margin:0 15px;text-decoration:none;color:white;}
+    .btn{background:linear-gradient(45deg,#8b5cf6,#6366f1);padding:12px 24px;border-radius:30px;display:inline-block;color: white;
+text-decoration: none;}
+
+    .hero{display:flex;max-width:1200px;margin:60px auto;padding:40px;border-radius:20px;background:linear-gradient(135deg,#0b0b0f,#1a1a2e);}
+    .hero-left{flex:1;padding-right:40px;}
+    .hero-right{flex:1;display:flex;justify-content:center;}
+    .hero h1{font-size:46px;line-height:1.2;}
+    .hero p{color:#aaa;margin-top:10px;}
+    .hero .btn{margin-top:50px;}
+    .hero video{width:300px;border-radius:30px;}
+
+    section{padding:80px 60px;}
+    section h2{margin-bottom:30px;}
+
+    .work-grid{display:flex;flex-direction:column;gap:25px;}
+    .top-videos{display:flex;flex-direction:column;gap:20px;}
+    .bottom-videos{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+
+    .video-box video{width:100%;object-fit:contain;border-radius:30px;background:black;}
+    .landscape video{height:320px;}
+    .reel video{height:400px;}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+    .box{padding:25px;border-radius:20px;}
+
+    .service-card{background:linear-gradient(145deg,#111,#1a1a2e);border:1px solid rgba(139,92,246,0.2);}
+    .service-card span{color:#8b5cf6;}
+
+    .price-card{background:linear-gradient(145deg,#111,#1a1a2e);padding:30px;border-radius:20px;border:1px solid rgba(99,102,241,0.2);}
+    .price-card ul{list-style:none;margin:15px 0;}
+    .price-card ul li{margin-bottom:10px;color:#ccc;}
+    .highlight{border:1px solid #8b5cf6;}
+
+    .price-btn{
+        margin-top:15px;padding:12px 20px;border:none;
+        border-radius:25px;
+        background:linear-gradient(45deg,#8b5cf6,#6366f1);
+        color:white;cursor:pointer;
+    }
+
+    .offer{
+        margin-top:40px;text-align:center;font-size:22px;font-weight:500;
+        color:white;background:linear-gradient(45deg,#8b5cf6,#6366f1);
+        padding:15px 25px;border-radius:30px;display:inline-block;
+    }
+    section{
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.6s ease;
+}
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* hero visible */
+.hero{
+    opacity:1 !important;
+    transform:none !important;
+}
+/* ===== MOBILE RESPONSIVE FIX ===== */
+@media (max-width: 768px){
+    nav .btn{
+    width:auto;          /* full width remove */
+    padding:8px 14px;    /* size reduce */
+    font-size:12px;      /* text small */
+    margin-top:10px;
+}
+
+    nav{
+        padding:15px 20px;
+        flex-wrap:wrap;
+    }
+
+    .menu{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    margin-top:10px;
+    flex-wrap:wrap;
+}
+.menu{
+    gap:10px;
+}
+.hero h1{
+    line-height:1.3;
+}
+.hero h3{
+    color:#8b5cf6;
+    font-size:14px;
+}
+.menu a{
+    font-size:12px;
+    margin:5px 10px;
+}
+
+    .hero{
+        flex-direction:column;
+        padding:20px;
+        margin:20px;
+    }
+
+    .hero-left{
+        padding-right:0;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero video{
+        width:100%;
+        margin-top:20px;
+    }
+
+    section{
+        padding:50px 20px;
+    }
+
+    .landscape video{
+        height:auto;
+    }
+
+    .bottom-videos{
+        grid-template-columns:1fr;
+    }
+
+    .reel video{
+        height:auto;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
+    </style>
+    </head>
+
+    <body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.jpeg">
+            <h3>Post Blend Studios</h3>
+        </div>
+
+        <div class="menu">
+            <a href="#about-section">About</a>
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+        </div>
+
+        <a href="https://ig.me/m/postblendstudios" target="_blank" class="btn">Get Your First Edit</a>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-left">
+            <h1>Turning moments into scroll-stopping edits🎬✂️✨</h1>
+            <p>We help creators grow with high-converting video edits.</p>
+            <br>
+            <h3>🚀 Early clients only – First video FREE</h3>
+            <a href="https://ig.me/m/postblendstudios" target="_blank" class="btn">Start Now</a>
+        </div>
+
+        <div class="hero-right">
+            <video autoplay muted loop controls playsinline>
+    <source src="port2.mp4" type="video/mp4">
+</video>
+        </div>
+    </div>
+
+    <section id="about-section" style="text-align:center; max-width:900px; margin:auto;">
+        <h2>About Us ✨</h2>
+        <p style="color:#aaa; font-size:18px;">
+            We help creators & brands turn raw footage into engaging content that grabs attention and drives growth.
+            From reels to long-form videos, we focus on storytelling, smooth edits, and high retention.
+        </p>
+    </section>
+
+    <section id="work">
+        <h2>Our Recent Works 🎥</h2>
+
+        <div class="work-grid">
+            <div class="top-videos">
+                <div class="video-box landscape">
+                    <video autoplay muted loop controls playsinline>
+    <source src="varun.mp4" type="video/mp4">
+</video>
+                </div>
+                <div class="video-box landscape">
+                    <video autoplay muted loop controls playsinline>
+    <source src="wed.mp4" type="video/mp4">
+</video>
+                </div>
+            </div>
+
+            <div class="bottom-videos">
+                <div class="video-box reel">
+                    <video autoplay muted loop controls playsinline>
+    <source src="port2.mp4" type="video/mp4">
+</video>
+                </div>
+                <div class="video-box reel">
+                    <video autoplay muted loop controls playsinline>
+    <source src="trip-edit.mp4" type="video/mp4">
+</video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Services 🚀</h2>
+        <h3>We create content that grabs attention & drives growth🔥</h3>
+        <br>
+
+        <div class="grid">
+            <div class="box service-card"><span>01/</span><h3>YouTube Videos</h3><p>Engaging edits that boost watch time & retention</p></div>
+            <div class="box service-card"><span>02/</span><h3>Short-form Content</h3><p>Reels & Shorts for consistent content posting</p></div>
+            <div class="box service-card"><span>03/</span><h3>High-Performance Reels</h3><p>Scroll-stopping edits designed for growth</p></div>
+            <div class="box service-card"><span>04/</span><h3>Vlog Editing</h3><p>Story-driven edits for daily & food vlog creators</p></div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing 💰</h2>
+
+        <div class="grid">
+            <div class="price-card">
+                <h3>For Reels/Shorts</h3>
+                <h1>₹199 /Per video</h1>
+                <ul>
+                    <li>✔ High-quality Editing</li>
+                    <li>✔ Smooth Effects</li>
+                    <li>✔ Fast Delivery (24hrs)</li>
+                    <li>✔ 5 Free Revisions</li>
+                    <li>✔ Extra: ₹50 per revision</li>
+                </ul>
+                <button class="price-btn" onclick="window.open('https://ig.me/m/postblendstudios','_blank')">Get Started</button>
+            </div>
+
+            <div class="price-card highlight">
+                <h3>For Long videos</h3>
+                <h1>₹90 /Per minute</h1>
+                <ul>
+                    <li>✔ Story-based Editing</li>
+                    <li>✔ Premium Effects</li>
+                    <li>✔ Priority Support</li>
+                    <li>✔ 5 Free Revisions</li>
+                    <li>✔ Extra: ₹50 per revision</li>
+                </ul>
+                <button class="price-btn" onclick="window.open('https://ig.me/m/postblendstudios','_blank')">Get Started</button>
+            </div>
+        </div>
+
+        <div style="text-align:center;">
+            <p class="offer">🎯 Exclusive Offer: First Video Free for Early Clients</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>How It Works ⚡</h2>
+
+        <div class="grid">
+            <div class="box service-card"><span>01</span><h3>Send Footage</h3><p>Share your clips via Drive / WhatsApp</p></div>
+            <div class="box service-card"><span>02</span><h3>Editing Begins</h3><p>We cut, enhance & add effects✨</p></div>
+            <div class="box service-card"><span>03</span><h3>Review & Revisions</h3><p>You review → we revise ✅</p></div>
+            <div class="box service-card"><span>04</span><h3>Final Delivery</h3><p>Ready-to-upload video 🚀</p></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section style="text-align:center; padding:60px 20px; border-top:1px solid #222;">
+        <img src="logo.jpeg" style="width:70px;">
+        <h2>Post Blend Studios</h2>
+
+        <p style="color:#aaa; margin-top:10px;">Ready to level up your content? DM us now 📩🎬</p>
+
+        <div style="margin-top:20px;">
+            <p>📸 Instagram: <a href="https://instagram.com/postblendstudios" target="_blank" style="color:#8b5cf6;">@postblendstudios</a></p>
+            <p>💬 WhatsApp: <a href="https://wa.me/917338980423" target="_blank" style="color:#8b5cf6;">Chat Now</a></p>
+            <p>📧 Email: <a href="mailto:postblendstudios7@gmail.com" style="color:#8b5cf6;">postblendstudios7@gmail.com</a></p>
+        </div>
+    </section>
+    <script>
+const sections = document.querySelectorAll("section");
+
+function revealSections() {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            sec.classList.add("show");
+        }
+    });
+}
+
+revealSections();
+window.addEventListener("scroll", revealSections);
+</script>
+
+    </body>
+    </html>
